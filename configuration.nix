@@ -8,8 +8,24 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      #<home-manager/nixos>
     ];
 
+  #home-manager.users.lynx = { pkgs, ... }: {
+  #  home.packages = with pkgs; [
+  #    ghostty
+  #    git
+  #    fastfetch
+  #    zsh-syntax-highlighting
+  #    zsh-autosuggestions
+  #    chromium
+  #    neovim
+  #  ];
+  #  
+  #  programs.zsh.enable = true;
+  #  home.stateVersion = "24.11";
+  #}; 
+ 
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
