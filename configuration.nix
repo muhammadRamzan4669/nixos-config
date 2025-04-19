@@ -8,24 +8,8 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      #<home-manager/nixos>
     ];
 
-  #home-manager.users.lynx = { pkgs, ... }: {
-  #  home.packages = with pkgs; [
-  #    ghostty
-  #    git
-  #    fastfetch
-  #    zsh-syntax-highlighting
-  #    zsh-autosuggestions
-  #    chromium
-  #    neovim
-  #  ];
-  #  
-  #  programs.zsh.enable = true;
-  #  home.stateVersion = "24.11";
-  #}; 
- 
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -63,8 +47,6 @@
   #};
 
   
-  programs.zsh.enable = true;
-  programs.chromium.enable = true;
   programs.hyprland.enable = true;
   # Configure keymap in X11
   # services.xserver.xkb.layout = "us";
@@ -90,13 +72,6 @@
     extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
     shell = pkgs.zsh;
     packages = with pkgs; [
-      ghostty
-      git
-      fastfetch
-      zsh-syntax-highlighting
-      zsh-autosuggestions
-      chromium
-      neovim
     ];
   };
 
@@ -105,15 +80,6 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    #neovim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-    #wget
-    #git
-    #fastfetch
-    #ghostty
-    #zsh-syntax-highlighting
-    #zsh-autosuggestions
-    #chromium
-    #ghostty
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
