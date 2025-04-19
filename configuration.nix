@@ -73,7 +73,7 @@
     isNormalUser = true;
     extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
     shell = pkgs.zsh;
-    packages = with packages; [
+    packages = with pkgs; [
       ghostty
       git
       fastfetch
