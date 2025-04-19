@@ -3,7 +3,7 @@
   {
     home.username = "lynx";
     home.homeDirectory = "/home/lynx";
-    #home.stateVersion = "24.11";
+    home.stateVersion = "24.11";
     #home.file.".p10k.zsh".source = ./p10k.zsh;
 
     programs.zsh = {
