@@ -31,29 +31,29 @@
     enable = true;
 
     settings = {
-	"modules": [
-    "title",
-    "separator",
-    "os",
-    "host",
-    "kernel",
-    "uptime",
-    "packages",
-    "shell",
-    "terminal",
-    "cpu",
-    "gpu",
-    "memory",
-    "disk",
-    "break",
-    "colors"
-  ],
-  "logo": {
-    "type": "nixos-small",
-    "width": 34,
-    "colors": [ "#7EBAE4", "#5277C3", "#FFFFFF" ],
-    "padding": { "top": 1, "left": 2 }
-  }
+	"modules"= [
+	    "title",
+	    "separator",
+	    "os",
+	    "host",
+	    "kernel",
+	    "uptime",
+	    "packages",
+	    "shell",
+	    "terminal",
+	    "cpu",
+	    "gpu",
+	    "memory",
+	    "disk",
+	    "break",
+	    "colors"
+	  ],
+	"logo"= {
+	    "type": "nixos-small",
+	    "width": 34,
+	    "colors": [ "#7EBAE4", "#5277C3", "#FFFFFF" ],
+	    "padding": { "top": 1, "left": 2 }
+	}
     };
   };
 
