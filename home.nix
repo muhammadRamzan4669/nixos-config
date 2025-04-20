@@ -9,6 +9,7 @@
     fastfetch
     neovim
     ghostty    
+    brightnessctl
   ];
 
   # Optional program configurations
