@@ -23,16 +23,16 @@
                   
 	 	  home-manager.nixosModules.home-manager
 		  
+                  ({config,pkgs,...}:{hardware.bluetooth.enable = true;
+                  services.blueman.enable = true;		  
+		  })
 		  {
                     home-manager.useGlobalPkgs = true;
                     home-manager.useUserPackages = true;
                     home-manager.users.lynx = import ./home.nix;
 		    home-manager.backupFileExtension = "backup";
                   }
-                  
-                  hardware.bluetooth.enable = true;
-		  services.blueman.enable = true;
-                ];
+                                  ];
 	      };
           };
   };
