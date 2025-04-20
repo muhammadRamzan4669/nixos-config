@@ -60,20 +60,39 @@
 {
   "logo": {
     "type": "nixos",
-    "colors": [ "#7EBAE4", "#5277C3" ],  // Official NixOS colors
-    "padding": { 
+    "width": 34,
+    "colors": [ "#7EBAE4", "#5277C3" ],
+    "padding": {
       "top": 1,
-      "right": 2
+      "left": 2
     }
   },
   "display": {
-    "separator": "",  // Nerd Font arrow
+    "separator": "",
     "keyColor": "#7EBAE4",
-    "valueColor": "#5277C3"
-  }
+    "valueColor": "#5277C3",
+    "barChar": "",
+    "barColor": "#5277C3"
+  },
+  "modules": [
+    "title",
+    "separator",
+    "os",
+    "host",
+    "kernel",
+    "uptime",
+    "packages",
+    "shell",
+    "terminal",
+    "cpu",
+    "gpu",
+    "memory",
+    "disk",
+    "break",
+    "colors"
+  ]
 }
 '';
-
 
   programs.chromium.enable = true;
   programs.git = {
