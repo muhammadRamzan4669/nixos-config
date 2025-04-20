@@ -13,6 +13,7 @@
     zsh-syntax-highlighting
     zsh-autosuggestions
     zsh-powerlevel10k
+    vscodium
   ];
 
   # Optional program configurations
