@@ -27,6 +27,16 @@
     };
   };
 
+  programs.fastfetch = {
+    enable = true;
+
+    settings = {
+      logo = {
+	source = arch;
+      };
+    };
+  };
+
   programs.zsh = {
   
   enable = true;
@@ -56,44 +66,6 @@
   
   # Place your p10k.zsh configuration in the correct location
   home.file.".p10k.zsh".source = ./p10k.zsh;
-  home.file.".config/fastfetch/config.jsonc".text = ''
-    {
-  "logo": {
-    "type": "builtin",
-    "source": "nixos",
-    "width": 34,
-    "colors": [ "#7EBAE4", "#5277C3" ],
-    "padding": {
-      "top": 1,
-      "left": 2
-    }
-  },
-  "display": {
-    "separator": "",
-    "keyColor": "#7EBAE4",
-    "valueColor": "#5277C3",
-    "barChar": "",
-    "barColor": "#5277C3"
-  },
-  "modules": [
-    "title",
-    "separator",
-    "os",
-    "host",
-    "kernel",
-    "uptime",
-    "packages",
-    "shell",
-    "terminal",
-    "cpu",
-    "gpu",
-    "memory",
-    "disk",
-    "break",
-    "colors"
-  ]
-}
-  '';
 
   programs.chromium.enable = true;
   programs.git = {
