@@ -29,6 +29,9 @@
                     home-manager.users.lynx = import ./home.nix;
 		    home-manager.backupFileExtension = "backup";
                   }
+                  
+                  hardware.bluetooth.enable = true;
+		  services.blueman.enable = true;
                 ];
 	      };
           };
