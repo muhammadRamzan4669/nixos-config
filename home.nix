@@ -11,7 +11,7 @@
     ghostty    
     brightnessctl
     zsh-syntax-highlighting
-    zsh-autosuggestion
+    zsh-autosuggestions
   ];
 
   # Optional program configurations
