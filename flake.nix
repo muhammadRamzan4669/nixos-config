@@ -27,6 +27,7 @@
                     home-manager.useGlobalPkgs = true;
                     home-manager.useUserPackages = true;
                     home-manager.users.lynx = import ./home.nix;
+		    home-manager.backupFileExtension = "backup";
                   }
                 ];
 	      };
