@@ -30,7 +30,17 @@
         file = "share/zsh-autosuggestions/zsh-autosuggestions.zsh";
       }
     ];
+
+    initExtra = ''
+      # Source your p10k configuration
+      [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+    '';
   };
+  
+  # Place your p10k.zsh configuration in the correct location
+  home.file.".p10k.zsh".source = ./p10k.zsh;
+
+
 
   programs.chromium.enable = true;
   programs.git = {
