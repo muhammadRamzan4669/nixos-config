@@ -23,6 +23,7 @@
     settings = {
       theme = "catppuccin-mocha";
       font-size = 24;
+      confirm-close-surface = false;
     };
   };
 
