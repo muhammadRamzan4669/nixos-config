@@ -12,6 +12,7 @@
     brightnessctl
     zsh-syntax-highlighting
     zsh-autosuggestions
+    zsh-powerlevel10k
   ];
 
   # Optional program configurations
