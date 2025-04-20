@@ -57,20 +57,23 @@
   # Place your p10k.zsh configuration in the correct location
   home.file.".p10k.zsh".source = ./p10k.zsh;
   home.file.".config/fastfetch/config.jsonc".text = ''
-  {
+{
   "logo": {
     "type": "nixos",
-    "colors": [ "#7EBAE4", "#5277C3" ],  # Official NixOS blue palette
-    "padding": { "top": 1, "right": 2 }
+    "colors": [ "#7EBAE4", "#5277C3" ],  // Official NixOS colors
+    "padding": { 
+      "top": 1,
+      "right": 2
+    }
   },
   "display": {
-    "separator": "",  # Nerd Font arrow
+    "separator": "",  // Nerd Font arrow
     "keyColor": "#7EBAE4",
     "valueColor": "#5277C3"
   }
 }
 '';
- 
+
 
   programs.chromium.enable = true;
   programs.git = {
