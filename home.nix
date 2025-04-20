@@ -77,4 +77,7 @@
     userName = "LYNX";
     userEmail = "ramzanlynx@outlook.com";
   };
+
+  hardware.bluetooth.enable = true;
+  services.blueman.enable = true;
 }
