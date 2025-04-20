@@ -31,8 +31,8 @@
     enable = true;
 
     settings = {
-      logo = {
-	source = arch;
+      "logo" = {
+	"source" = "arch";
       };
     };
   };
