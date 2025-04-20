@@ -57,7 +57,7 @@
   # Place your p10k.zsh configuration in the correct location
   home.file.".p10k.zsh".source = ./p10k.zsh;
   home.file.".config/fastfetch/config.jsonc".text = ''
-  {
+    {
   "logo": {
     "type": "builtin",
     "source": "nixos",
