@@ -57,9 +57,10 @@
   # Place your p10k.zsh configuration in the correct location
   home.file.".p10k.zsh".source = ./p10k.zsh;
   home.file.".config/fastfetch/config.jsonc".text = ''
-{
+  {
   "logo": {
-    "type": "nixos",
+    "type": "builtin",
+    "source": "nixos",
     "width": 34,
     "colors": [ "#7EBAE4", "#5277C3" ],
     "padding": {
@@ -92,7 +93,7 @@
     "colors"
   ]
 }
-'';
+  '';
 
   programs.chromium.enable = true;
   programs.git = {
