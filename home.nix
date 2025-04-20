@@ -10,6 +10,8 @@
     neovim
     ghostty    
     brightnessctl
+    zsh-syntax-highlighting
+    zsh-autosuggestion
   ];
 
   # Optional program configurations
