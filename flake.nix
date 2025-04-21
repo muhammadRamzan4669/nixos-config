@@ -14,7 +14,7 @@
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, lazyvim-starter, ... }:
+  outputs = { self, nixpkgs, home-manager, lazyvim-starter, ... }@inputs:
 	  let
 	    lib = nixpkgs.lib;
 	  in 
