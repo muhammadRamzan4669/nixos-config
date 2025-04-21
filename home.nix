@@ -31,6 +31,7 @@ in
     ripgrep
     lazygit
     fd
+    gcc
   ];
 
   # Optional program configurations
