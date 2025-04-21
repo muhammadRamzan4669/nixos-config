@@ -1,4 +1,22 @@
-{ pkgs, inputs,  ... }: {
+{ pkgs, inputs,  ... }: 
+let 
+# Create a custom derivation for the Neovim configuration
+  nvimConfig = pkgs.stdenv.mkDerivation {
+    name = "nvim-config";
+    src = inputs.lazyvim-starter;
+    buildPhase = ''
+      mkdir -p $out
+      cp -r $src/* $out/
+      # Optionally, add custom configuration files here
+      # Example: cp ${./custom.lua} $out/lua/user/custom.lua
+    '';
+    installPhase = ''
+      mkdir -p $out
+      cp -r . $out/
+    '';
+  };
+in
+{
   # Required
   home.username = "lynx";
   home.homeDirectory = "/home/lynx";
@@ -76,7 +94,10 @@
   # Place your p10k.zsh configuration in the correct location
   home.file.".p10k.zsh".source = ./p10k.zsh;
   
-  home.file.".config/nvim".source = inputs.lazyvim-starter;
+  home.file.".config/nvim" = {
+    source = nvimConfig;
+    recursive = true;  # Copy all files and directories
+  };
 
   programs.chromium.enable = true;
   programs.git = {
