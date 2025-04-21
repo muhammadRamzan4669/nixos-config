@@ -16,6 +16,9 @@
     zsh-powerlevel10k
     vscodium
     qutebrowser
+    ripgrep
+    lazygit
+    fd
   ];
 
   # Optional program configurations
@@ -73,6 +76,8 @@
   # Place your p10k.zsh configuration in the correct location
   home.file.".p10k.zsh".source = ./p10k.zsh;
   
+  home.file.".config/nvim".source = inputs.lazyvim-starter;
+
   programs.chromium.enable = true;
   programs.git = {
     enable = true;

@@ -8,6 +8,10 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    lazyvim-starter = {
+      url = "github:LazyVim/starter";
+      flake = false; # This is not a flake, just a source repository
+    };
   };
 
   outputs = { self, nixpkgs, home-manager, ... }:
@@ -31,7 +35,8 @@
                     home-manager.useUserPackages = true;
                     home-manager.users.lynx = import ./home.nix;
 		    home-manager.backupFileExtension = "backup";
-                  }
+                    home-manager.extraSpecialArgs = { inputs = self.inputs; };
+		   }
                                   ];
 	      };
           };
