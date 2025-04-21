@@ -4,10 +4,6 @@ let
   nvimConfig = pkgs.stdenv.mkDerivation {
     name = "nvim-config";
     src = inputs.lazyvim-starter;
-    buildPhase = ''
-      mkdir -p $out
-      cp -r $src/* $out/
-    '';
     installPhase = ''
       mkdir -p $out
       cp -r . $out/
