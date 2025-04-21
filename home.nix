@@ -14,6 +14,7 @@
     zsh-autosuggestions
     zsh-powerlevel10k
     vscodium
+    qutebrowser
   ];
 
   # Optional program configurations
