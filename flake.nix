@@ -8,9 +8,13 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    lazyvim-starter = {
+      url = "github:LazyVim/starter";
+      flake = false; # Important: It's not a flake itself
+    };
   };
 
-  outputs = { self, nixpkgs, home-manager, ... }:
+  outputs = { self, nixpkgs, home-manager, lazyvim-starter, ... }:
 	  let
 	    lib = nixpkgs.lib;
 	  in 
@@ -18,6 +22,7 @@
 	    nixosConfigurations = {
 	      nixos = lib.nixosSystem {
 	        system = "x86_64-linux";
+		specialArgs = { inherit inputs; };
 		modules = [
                   ./configuration.nix
                   
