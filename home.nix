@@ -7,8 +7,6 @@ let
     buildPhase = ''
       mkdir -p $out
       cp -r $src/* $out/
-      # Optionally, add custom configuration files here
-      # Example: cp ${./custom.lua} $out/lua/user/custom.lua
     '';
     installPhase = ''
       mkdir -p $out
