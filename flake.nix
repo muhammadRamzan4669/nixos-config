@@ -8,13 +8,9 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    lazyvim-starter = {
-      url = "github:LazyVim/starter";
-      flake = false; # Important: It's not a flake itself
-    };
   };
 
-  outputs = { self, nixpkgs, home-manager, lazyvim-starter, ... }@inputs:
+  outputs = { self, nixpkgs, home-manager, ... }:
 	  let
 	    lib = nixpkgs.lib;
 	  in 
@@ -22,7 +18,6 @@
 	    nixosConfigurations = {
 	      nixos = lib.nixosSystem {
 	        system = "x86_64-linux";
-		specialArgs = { inherit inputs; };
 		modules = [
                   ./configuration.nix
                   
@@ -34,7 +29,7 @@
 		  {
                     home-manager.useGlobalPkgs = true;
                     home-manager.useUserPackages = true;
-                    home-manager.users.lynx = import ./home.nix {inherit pkgs inputs; };
+                    home-manager.users.lynx = import ./home.nix;
 		    home-manager.backupFileExtension = "backup";
                   }
                                   ];

@@ -6,11 +6,6 @@
 
   # Add packages here
   home.packages = with pkgs; [
-    gcc
-    gnumake
-    pkg-config
-    fd
-    ripgrep
     git
     fastfetch
     neovim
@@ -24,10 +19,6 @@
   ];
 
   # Optional program configurations
-  
-  programs.neovim = {
-    enable = true;
-  };
   
   programs.ghostty = {
     enable = true;
@@ -82,17 +73,10 @@
   # Place your p10k.zsh configuration in the correct location
   home.file.".p10k.zsh".source = ./p10k.zsh;
   
-  xdg.configFile."nvim" = {
-    source = inputs.lazyvim-starter;
-    recursive = true;
-  };
-
   programs.chromium.enable = true;
   programs.git = {
     enable = true;
     userName = "LYNX";
     userEmail = "ramzanlynx@outlook.com";
   };
-
-  programs.home-manager.enable = true;
 }
