@@ -34,7 +34,7 @@
 		  {
                     home-manager.useGlobalPkgs = true;
                     home-manager.useUserPackages = true;
-                    home-manager.users.lynx = import ./home.nix;
+                    home-manager.users.lynx = import ./home.nix {inherit pkgs inputs; };
 		    home-manager.backupFileExtension = "backup";
                   }
                                   ];
