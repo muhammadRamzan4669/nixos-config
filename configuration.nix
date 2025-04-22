@@ -48,7 +48,9 @@
 
   
   programs.hyprland.enable = true;
-  #programs.hyprland.settings = {};
+  programs.hyprland.settings = {
+    bind = [SUPER,e,exec,qutebrowser];
+  };
   programs.zsh.enable = true; 
   # Configure keymap in X11
   # services.xserver.xkb.layout = "us";
