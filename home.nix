@@ -33,7 +33,7 @@ in
     fd
     gcc
     mpv
-    node
+    nodejs_23
   ];
 
   # Optional program configurations
