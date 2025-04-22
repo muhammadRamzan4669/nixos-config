@@ -82,9 +82,10 @@
       };
 
       master = {
-        _.status = "master";
+        new_is_master = true;
+        new_on_top = false;
       };
-
+      
       misc = {
         force_default_wallpaper = -1;
         disable_hyprland_logo = false;
