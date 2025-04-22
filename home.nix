@@ -66,6 +66,7 @@ in
       "$mod" = "SUPER";
       bind = [
         "$mod, E, exec, qutebrowser" # Bind Super + E to open qutebrowser
+        "$mod, Q, exec, ghostty" 
       ];
     };
   };
