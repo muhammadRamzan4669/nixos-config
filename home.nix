@@ -55,9 +55,9 @@ in
   wayland.windowManager.hyprland.enable = true;
 
   wayland.windowManager.hyprland.settings = {
-    bind = [
-      "SUPER, e, exec, qutebrowser"
-    ];
+    #bind = [
+    #  "SUPER, e, exec, qutebrowser"
+    #];
   };
   programs.zsh = {
   
