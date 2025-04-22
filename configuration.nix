@@ -49,7 +49,7 @@
   
   programs.hyprland.enable = true;
   programs.hyprland.settings = {
-    bind = [$mainMod, E, exec, qutebrowser];
+    bind = [$SUPER, E, exec, qutebrowser];
   };
   programs.zsh.enable = true; 
   # Configure keymap in X11
