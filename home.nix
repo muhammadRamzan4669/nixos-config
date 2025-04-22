@@ -59,6 +59,17 @@ in
     #  "SUPER, e, exec, qutebrowser"
     #];
 #  };
+  wayland.windowManager.hyprland = {
+    enable = true;
+    settings = {
+      # Keybindings
+      "$mod" = "SUPER";
+      bind = [
+        "$mod, E, exec, qutebrowser" # Bind Super + E to open qutebrowser
+      ];
+    };
+  };
+
   programs.zsh = {
   
   enable = true;
