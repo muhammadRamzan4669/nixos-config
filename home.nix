@@ -33,6 +33,7 @@ in
     fd
     gcc
     mpv
+    node
   ];
 
   # Optional program configurations
