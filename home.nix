@@ -32,6 +32,7 @@ in
     lazygit
     fd
     gcc
+    mpv
   ];
 
   # Optional program configurations
