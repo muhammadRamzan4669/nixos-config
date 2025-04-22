@@ -52,13 +52,13 @@ in
   programs.fastfetch = {
     enable = true;
   };
-  wayland.windowManager.hyprland.enable = true;
+#  wayland.windowManager.hyprland.enable = true;
 
-  wayland.windowManager.hyprland.settings = {
+#  wayland.windowManager.hyprland.settings = {
     #bind = [
     #  "SUPER, e, exec, qutebrowser"
     #];
-  };
+#  };
   programs.zsh = {
   
   enable = true;

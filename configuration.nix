@@ -48,6 +48,7 @@
 
   
   programs.hyprland.enable = true;
+  #programs.hyprland.settings = {};
   programs.zsh.enable = true; 
   # Configure keymap in X11
   # services.xserver.xkb.layout = "us";
