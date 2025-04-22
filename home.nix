@@ -34,6 +34,7 @@ in
     gcc
     mpv
     nodejs_23
+    unzip
   ];
 
   # Optional program configurations
