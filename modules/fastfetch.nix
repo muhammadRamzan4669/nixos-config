@@ -17,7 +17,7 @@
       # Display configuration
       display = {
         separator = ": "; # Simple colon separator for a clean look
-        keyWidth = 12; # Aligns labels to a fixed width
+        key.width = 12; # Aligns labels to a fixed width
       };
 
       # Modules configuration
@@ -26,29 +26,29 @@
         {
           type = "title"; # Username@hostname
           key = "User ";
-          keyColor = "36"; # Cyan for the title
+          key.color = "36"; # Cyan for the title
         }
         "break"
         {
           type = "os";
           key = "OS   ";
-          keyColor = "34"; # Blue for system-related fields
+          key.color = "34"; # Blue for system-related fields
         }
         {
           type = "kernel";
           key = " ├  ";
-          keyColor = "34";
+          key.color = "34";
         }
         {
           type = "packages";
           format = "{} (pacman)"; # Adjust based on your package manager
           key = " ├ 󰏖 ";
-          keyColor = "34";
+          key.color = "34";
         }
         {
           type = "shell";
           key = " └  ";
-          keyColor = "34";
+          key.color = "34";
         }
         "break"
         {
