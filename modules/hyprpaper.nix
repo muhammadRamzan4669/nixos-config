@@ -6,9 +6,8 @@
     settings = {
       ipc = "on";
       splash = false;
-      wallpaper = [
-        ",${../wallpaper.jpg}" # Reference the wallpaper in nix-config
-      ];
+      preload = [ "${../wallpaper.jpg}" ]; # Preload the wallpaper
+      wallpaper = [ "eDP-1,${../wallpaper.jpg}" ]; # Assign to eDP-1 monitor
     };
   };
 }

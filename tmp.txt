@@ -1,0 +1,18 @@
+● hyprpaper.service - hyprpaper
+     Loaded: loaded (/home/lynx/.config/systemd/user/hyprpaper.service; enabled; preset: ignored)
+     Active: active (running) since Wed 2025-04-23 21:01:27 PKT; 11min ago
+ Invocation: 782fc33de4564cc7bb735fe3b25b22af
+   Main PID: 3600 (hyprpaper)
+      Tasks: 2 (limit: 23794)
+     Memory: 1.5M (peak: 1.9M)
+        CPU: 63ms
+     CGroup: /user.slice/user-1000.slice/user@1000.service/app.slice/hyprpaper.service
+             └─3600 /nix/store/ls9f018ss9cgdr560idh3rzbbkyn6mlw-hyprpaper-0.7.4/bin/hyprpaper
+
+Apr 23 21:01:27 nixos systemd[1302]: Started hyprpaper.
+Apr 23 21:01:27 nixos hyprpaper[3600]: [LOG] Welcome to hyprpaper!
+Apr 23 21:01:27 nixos hyprpaper[3600]: built from commit v0.7.4 ()
+Apr 23 21:01:27 nixos hyprpaper[3600]: Error in config:
+Apr 23 21:01:27 nixos hyprpaper[3600]: Config error in file /nix/store/28dhmik9bn9ivmdqxjdqwzy2n4n9k4lx-hm_hyprhyprpaper.conf at line 3: wallpaper failed (not preloaded)
+Apr 23 21:01:27 nixos hyprpaper[3600]: [WARN] Monitor eDP-1 does not have a target! A wallpaper will not be created.
+Apr 23 21:01:27 nixos hyprpaper[3600]: [LOG] hyprpaper socket started at /run/user/1000/hypr/29e2e59fdbab8ed2cc23a20e3c6043d5decb5cdc_1745423552_227730970/.hyprpaper.sock (fd: 4)
