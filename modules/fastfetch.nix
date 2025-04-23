@@ -26,29 +26,29 @@
         {
           type = "title"; # Username@hostname
           key = "User ";
-          key.color = "36"; # Cyan for the title
+          keyColor = "36"; # Cyan for the title
         }
         "break"
         {
           type = "os";
           key = "OS   ";
-          key.color = "34"; # Blue for system-related fields
+          keyColor = "34"; # Blue for system-related fields
         }
         {
           type = "kernel";
           key = " ├  ";
-          key.color = "34";
+          keyColor = "34";
         }
         {
           type = "packages";
           format = "{} (pacman)"; # Adjust based on your package manager
           key = " ├ 󰏖 ";
-          key.color = "34";
+          keyColor = "34";
         }
         {
           type = "shell";
           key = " └  ";
-          key.color = "34";
+          keyColor = "34";
         }
         "break"
         {
