@@ -67,6 +67,10 @@
   #   pulse.enable = true;
   # };
 
+  hardware.opengl = {
+      enable = true;
+      extraPackages = with pkgs; [intel-media-driver vaapiIntel libvdpau-va-gl];
+    };
   # Enable touchpad support (enabled default in most desktopManager).
   # services.libinput.enable = true;
 
