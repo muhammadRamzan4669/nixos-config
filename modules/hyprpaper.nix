@@ -7,7 +7,7 @@
       ipc = "on";
       splash = false;
       wallpapers = [
-        ",${./wallpaper.jpg}" # Reference the wallpaper in nix-config
+        ",${../wallpaper.jpg}" # Reference the wallpaper in nix-config
       ];
     };
   };
