@@ -8,6 +8,7 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      ./modules/keyd.nix
     ];
 
   # Use the systemd-boot EFI boot loader.
