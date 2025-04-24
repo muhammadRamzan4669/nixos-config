@@ -15,7 +15,7 @@
     keyBindings = {
       normal = {
         "M" = "hint links spawn mpv {hint-url}";
-        "N" = "hint links spawn mpv --ytdl-format="bestvideo[height<=720]+bestaudio/best[height<=720]" {hint-url}"; 
+        "N" = ''hint links spawn mpv --ytdl-format="bestvideo[height<=720]+bestaudio/best[height<=720]" {hint-url}''; 
       };
     };
 
