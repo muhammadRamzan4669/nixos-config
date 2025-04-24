@@ -8,5 +8,6 @@
     ./modules/fastfetch.nix
     ./modules/qutebrowser.nix 
     ./modules/hyprpaper.nix 
+    ./modules/keyd.nix
   ];
 }
