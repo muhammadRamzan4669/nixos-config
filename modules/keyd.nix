@@ -5,7 +5,6 @@
   # Enable the keyd service
   services.keyd = {
     enable = true;
-    package = pkgs.keyd;
 
     keyboards.default = {
       ids = [ "*" ]; # Apply to all keyboards
