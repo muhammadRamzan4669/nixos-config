@@ -22,7 +22,7 @@
       };
       # Add timeout for overload mods (in milliseconds)
       extraConfig = ''
-        timeout = 250
+        timeout = 400
         overlap_timeout = 50
       '';
     };
