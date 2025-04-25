@@ -8,6 +8,7 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      ./modules/caps2esc.nix
     ];
 
   # Use the systemd-boot EFI boot loader.
