@@ -21,10 +21,10 @@
         };
       };
       # Add timeout for overload mods (in milliseconds)
-      extraConfig = ''
-        timeout = 180
-      '';
-    };
+     extraConfig = ''
+  timeout = 250
+  overlap_timeout = 50
+'';
   };
 
   # Optional: Libinput quirk for palm rejection with keyd's virtual keyboard
