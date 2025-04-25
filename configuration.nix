@@ -19,8 +19,8 @@
   # Pick only one of the below networking options.
   networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
   networking.wireless.networks = {
-    "one" = {
-      psk = "husnain411934@";
+    "PTCL-BB" = {
+      psk = "111222333";
     };
   };
   # networking.networkmanager.enable = true;  # Easiest to use and most distros use this by default.
