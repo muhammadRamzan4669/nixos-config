@@ -29,12 +29,12 @@
   };
 
   # Optional: Libinput quirk for palm rejection with keyd's virtual keyboard
-  environment.etc."libinput/local-overrides.quirks".text = ''
-    [Serial Keyboards]
-    MatchUdevType=keyboard
-    MatchName=keyd virtual keyboard
-    AttrKeyboardIntegration=internal
-  '';
+  #environment.etc."libinput/local-overrides.quirks".text = ''
+  #  [Serial Keyboards]
+  #  MatchUdevType=keyboard
+  #  MatchName=keyd virtual keyboard
+  #  AttrKeyboardIntegration=internal
+  #'';
 
   # Optional: Add keyd to system packages for CLI access
   # environment.systemPackages = [ pkgs.keyd ];
