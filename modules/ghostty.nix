@@ -11,6 +11,7 @@
       cursor-style = "block";
       mouse-hide-while-typing = true;
       window-padding-x = 2;
+      bold-is-bright = true;
     };
   };
 }
