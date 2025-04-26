@@ -9,8 +9,8 @@
   ];
   programs.zsh = {
     enable = true;
-    enableAutosuggestion = true;
-    enableSyntaxHighlighting = true;
+    autosuggestion = true;
+    syntaxHighlighting = true;
     
     initContent = ''
       source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme
