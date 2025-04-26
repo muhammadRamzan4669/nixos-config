@@ -5,7 +5,6 @@
     ./modules/zsh.nix
     ./modules/neovim.nix
     ./modules/ghostty.nix
-    ./modules/fastfetch.nix
     ./modules/qutebrowser.nix 
     ./modules/hyprpaper.nix 
   ];

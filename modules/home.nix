@@ -7,8 +7,6 @@
 
   home.packages = with pkgs; [
     git
-    fastfetch
-    vscodium
     qutebrowser
     ripgrep
     lazygit
@@ -19,8 +17,6 @@
     unzip
   ];
 
-  programs.fastfetch.enable = true;
-  programs.chromium.enable = true;
   programs.git = {
     enable = true;
     userName = "LYNX";
