@@ -10,7 +10,7 @@
       confirm-close-surface = false;
       cursor-style = "block";
       mouse-hide-while-typing = true;
-      window-padding-x = 2;
+      window-padding-x = 10;
       bold-is-bright = true;
     };
   };
