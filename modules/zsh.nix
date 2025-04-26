@@ -5,8 +5,8 @@
     zsh-syntax-highlighting
     zsh-autosuggestions
     zsh-powerlevel10k
-    powerlevel10k
   ];
+
   programs.zsh = {
     enable = true;
     autosuggestion.enable = true;
