@@ -8,10 +8,10 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    lazyvim-starter = {
-      url = "github:LazyVim/starter";
-      flake = false; # This is not a flake, just a source repository
-    };
+    #lazyvim-starter = {
+    #  url = "github:LazyVim/starter";
+    #  flake = false; # This is not a flake, just a source repository
+    #};
   };
 
   outputs = { self, nixpkgs, home-manager, ... }:
