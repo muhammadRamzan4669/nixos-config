@@ -16,6 +16,10 @@
   boot.loader.efi.canTouchEfiVariables = true;
   boot.blacklistedKernelModules = ["amdgpu" "radeon"];
   networking.hostName = "nixos"; # Define your hostname.
+
+  hardware.bluetooth.enable = true;
+  services.blueman.enable = true;
+
   # Pick only one of the below networking options.
   networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
   networking.wireless.networks = {
@@ -48,11 +52,11 @@
   #};
 
   
-  programs.hyprland.enable = true;
+  # programs.hyprland.enable = true;
   # programs.hyprland.settings = {
   #   bind = [SUPER, E, exec, qutebrowser];
   # };
-  programs.zsh.enable = true; 
+  # programs.zsh.enable = true; 
   # Configure keymap in X11
   # services.xserver.xkb.layout = "us";
   # services.xserver.xkb.options = "eurosign:e,caps:escape";
@@ -63,10 +67,10 @@
   # Enable sound.
   # hardware.pulseaudio.enable = true;
   # OR
-  # services.pipewire = {
-  #   enable = true;
-  #   pulse.enable = true;
-  # };
+  services.pipewire = {
+    enable = true;
+    pulse.enable = true;
+  };
 
   hardware.graphics = {
       enable = true;
