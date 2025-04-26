@@ -2,7 +2,6 @@
 { pkgs, ... }:
 {
   imports = [
-    ./modules/home.nix
     ./modules/hyprland.nix
     ./modules/zsh.nix
     ./modules/neovim.nix
