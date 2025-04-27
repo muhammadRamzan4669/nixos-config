@@ -24,6 +24,7 @@
     mpv
     nodejs_23 # Consider using a more stable LTS version unless 23 is needed
     unzip
+    aria2
   ];
 
   programs.zsh.enable = true;
