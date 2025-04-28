@@ -1,6 +1,5 @@
 # home.nix
-{ pkgs, ... }:
-{
+{ pkgs, ... }: {
   imports = [
     ./modules/hyprland.nix
     ./modules/zsh.nix
@@ -8,7 +7,6 @@
     ./modules/ghostty.nix
     ./modules/qutebrowser.nix 
     ./modules/hyprpaper.nix
-    ./modules/iwd.nix
   ];
 
   home.username = "lynx";
