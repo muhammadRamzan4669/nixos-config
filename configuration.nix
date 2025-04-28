@@ -1,9 +1,7 @@
-{ config, lib, pkgs, ... }:
-{
-  imports =
-  [
-      ./hardware-configuration.nix
-      ./modules/caps2esc.nix
+{ config, lib, pkgs, ... }: {
+  imports = [
+    ./hardware-configuration.nix
+    ./modules/caps2esc.nix
   ];
 
   boot.loader.systemd-boot.enable = true;
@@ -11,26 +9,26 @@
   boot.blacklistedKernelModules = ["amdgpu" "radeon"];
   networking.hostName = "nixos"; 
 
-  hardware.bluetooth.enable = true;
-  services.blueman.enable = true;
+  #hardware.bluetooth.enable = true;
+  #services.blueman.enable = true;
 
-  networking.wireless.enable = true;
-  networking.wireless.networks = {
-    "one" = {
-      psk = "husnain411934@";
-    };
+  #networking.wireless.enable = true;
+  #networking.wireless.networks = {
+  #  "one" = {
+  #   psk = "husnain411934@";
+  #  };
 
-    "eduroam" = {
-      auth = ''
-        key_mgmt=WPA-EAP
-        eap=PEAP
-        identity="fa23-bcs-126@cuilahore.edu.pk"
-        password="admin4669"
-        phase2="auth=MSCHAPV2"
-        anonymous_identity="cuilahore.edu.pk"
-      '';
-    };
-  };
+   # "eduroam" = {
+   #   auth = ''
+    #    key_mgmt=WPA-EAP
+     #   eap=PEAP
+      #  identity="fa23-bcs-126@cuilahore.edu.pk"
+       # password="admin4669"
+        #phase2="auth=MSCHAPV2"
+        #anonymous_identity="cuilahore.edu.pk"
+      #'';
+    #};
+  #};
 
   time.timeZone = "Asia/Karachi";
 

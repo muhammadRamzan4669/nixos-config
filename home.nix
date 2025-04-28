@@ -7,7 +7,8 @@
     ./modules/neovim.nix
     ./modules/ghostty.nix
     ./modules/qutebrowser.nix 
-    ./modules/hyprpaper.nix 
+    ./modules/hyprpaper.nix
+    ./modules/iwd.nix
   ];
 
   home.username = "lynx";
