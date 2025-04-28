@@ -25,6 +25,7 @@
     nodejs_23
     unzip
     aria2
+    iwd
   ];
 
   programs.zsh.enable = true;
