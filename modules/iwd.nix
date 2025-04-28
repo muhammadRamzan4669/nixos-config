@@ -9,7 +9,7 @@
   networking.networkmanager.enable = false; # Disable NetworkManager if present
 
   # Ensure iwctl is available system-wide
-  environment.systemPackages = [ pkgs.iwctl ];
+  #environment.systemPackages = [ pkgs.iwctl ];
 
   # Create the iwd configuration file for the 802.1X network
   environment.etc."iwd/<SSID>.8021x" = {
