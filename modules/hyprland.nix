@@ -1,7 +1,6 @@
 # modules/hyprland.nix
-{ pkgs, ... }:
-{
-  home.packages = with pkgs; [ brightnessctl ]; # For brightness keybindings
+{ pkgs, ... }: {
+  home.packages = with pkgs; [ brightnessctl ];
   wayland.windowManager.hyprland = {
     enable = true;
     systemd.enable = true;

@@ -1,6 +1,5 @@
 # modules/zsh.nix
-{ pkgs, ... }:
-{
+{ pkgs, ... }: {
   home.packages = with pkgs; [
     zsh-syntax-highlighting
     zsh-autosuggestions

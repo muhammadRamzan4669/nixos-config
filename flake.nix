@@ -1,5 +1,4 @@
 {
-
   description = "My First Flake";
 
   inputs = {
@@ -10,31 +9,26 @@
     };
     lazyvim-starter = {
       url = "github:LazyVim/starter";
-      flake = false; # This is not a flake, just a source repository
+      flake = false;
     };
   };
 
   outputs = { self, nixpkgs, home-manager, ... }:
 	  let
 	    lib = nixpkgs.lib;
-	  in 
-	  {
+	  in {
 	    nixosConfigurations = {
 	      nixos = lib.nixosSystem {
 	        system = "x86_64-linux";
-		modules = [
-                  ./configuration.nix
-                  
-	 	  home-manager.nixosModules.home-manager
-		  
-		  {
-                    home-manager.users.lynx = import ./home.nix;
-		    home-manager.backupFileExtension = "backup";
-                    home-manager.extraSpecialArgs = { inputs = self.inputs; };
-		   }
-                                  ];
+		      modules = [
+            ./configuration.nix
+	          home-manager.nixosModules.home-manager {
+              home-manager.users.lynx = import ./home.nix;
+		          home-manager.backupFileExtension = "backup";
+              home-manager.extraSpecialArgs = { inputs = self.inputs; };
+		        }
+          ];
 	      };
-          };
+      };
   };
-
 }

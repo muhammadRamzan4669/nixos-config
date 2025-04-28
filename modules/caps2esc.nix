@@ -1,7 +1,4 @@
-{ config, pkgs, ... }:
-
-{
-  # Enable interception-tools service
+{ config, pkgs, ... }: {
   services.interception-tools = {
     enable = true;
     plugins = [ pkgs.interception-tools-plugins.caps2esc ];
@@ -13,7 +10,6 @@
     '';
   };
 
-  # Ensure required packages are available
   environment.systemPackages = with pkgs; [
     interception-tools
     interception-tools-plugins.caps2esc

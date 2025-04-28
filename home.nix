@@ -12,7 +12,7 @@
 
   home.username = "lynx";
   home.homeDirectory = "/home/lynx";
-  home.stateVersion = "24.11"; # Consider updating to "24.11" or your current system stateVersion
+  home.stateVersion = "24.11";
 
   home.packages = with pkgs; [
     git
@@ -22,7 +22,7 @@
     fd
     gcc
     mpv
-    nodejs_23 # Consider using a more stable LTS version unless 23 is needed
+    nodejs_23
     unzip
     aria2
   ];

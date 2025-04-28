@@ -1,7 +1,7 @@
 # modules/neovim.nix
-{ pkgs, inputs, ... }:
-let
-  nvimConfig = pkgs.stdenv.mkDerivation {
+{ pkgs, inputs, ... }: 
+
+let nvimConfig = pkgs.stdenv.mkDerivation {
     name = "nvim-config";
     src = inputs.lazyvim-starter;
     installPhase = ''
@@ -9,8 +9,8 @@ let
       cp -r . $out/
     '';
   };
-in
-{
+
+in {
   home.packages = with pkgs; [ neovim ];
   home.file.".config/nvim" = {
     source = nvimConfig;
