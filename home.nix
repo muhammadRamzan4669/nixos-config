@@ -3,11 +3,9 @@
   imports = [
     ./modules/hyprland.nix
     ./modules/zsh.nix
-    ./modules/neovim.nix
     ./modules/ghostty.nix
     ./modules/qutebrowser.nix 
     ./modules/hyprpaper.nix
-    ./modules/dev-tools.nix
   ];
 
   home.username = "lynx";
@@ -17,15 +15,17 @@
   home.packages = with pkgs; [
     git
     qutebrowser
-    ripgrep
-    lazygit
-    fd
-    gcc
+    #ripgrep
+    #lazygit
+    #fd
+    #gcc
     mpv
     nodejs_23
     unzip
     aria2
     iwd
+    vscodium
+    neovim
   ];
 
   programs.zsh.enable = true;
