@@ -12,17 +12,9 @@
   #environment.systemPackages = [ pkgs.iwctl ];
 
   # Create the iwd configuration file for the 802.1X network
-  environment.etc."iwd/<SSID>.8021x" = {
-    text = ''
-      [Security]
-      EAP-Method=PEAP
-      EAP-Identity=fa23-bcs-126@cuilahore.edu.pk
-      EAP-PEAP-Phase2-Method=MSCHAPV2
-      EAP-Password=admin4669
-
-      [Settings]
-      AutoConnect=true
-    '';
-    mode = "0600"; # Secure permissions to protect the password
-  };
+  systemd.tmpfiles.rules = [
+  "w /var/lib/iwd/eduroam.8021x - - - - [Security]\nEAP-Method=PEAP\nEAP-Identity=fa23-bcs-126@cuilahore.edu.pk\nEAP-PEAP-Phase2-Method=MSCHAPV2\nEAP-Password=${builtins.readFile /etc/nixos/secrets/eduroam_password}\n\n[Settings]\nAutoConnect=true"
+  "w /var/lib/iwd/one.psk - - - - [Security]\nPassphrase=${builtins.readFile /etc/nixos/secrets/one_password}\n\n[Settings]\nAutoConnect=true"
+  "w /var/lib/iwd/PTCL-BB.psk - - - - [Security]\nPassphrase=${builtins.readFile /etc/nixos/secrets/PTCL-BB_password}\n\n[Settings]\nAutoConnect=true"
+];
 }
