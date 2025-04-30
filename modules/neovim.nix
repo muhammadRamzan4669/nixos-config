@@ -1,5 +1,4 @@
-# modules/neovim.nix
-{ pkgs, inputs, ... }: 
+{ pkgs, inputs, ... }:
 
 let nvimConfig = pkgs.stdenv.mkDerivation {
     name = "nvim-config";
@@ -7,6 +6,8 @@ let nvimConfig = pkgs.stdenv.mkDerivation {
     installPhase = ''
       mkdir -p $out
       cp -r . $out/
+      # Remove Mason to use system language servers
+      rm $out/lua/plugins/mason.lua || true
     '';
   };
 

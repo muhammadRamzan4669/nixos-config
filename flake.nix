@@ -22,7 +22,6 @@
 	        system = "x86_64-linux";
 		      modules = [
             ./configuration.nix
-            ./modules/iwd.nix
 	          home-manager.nixosModules.home-manager {
               home-manager.users.lynx = import ./home.nix;
 		          home-manager.backupFileExtension = "backup";
