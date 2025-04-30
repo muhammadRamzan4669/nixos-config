@@ -8,6 +8,8 @@ let nvimConfig = pkgs.stdenv.mkDerivation {
       cp -r . $out/
       # Remove Mason to use system language servers
       rm $out/lua/plugins/mason.lua || true
+      mkdir -p $out/lua/plugins
+      echo 'return {import = "lazyvim.plugins.extras.linting.eslint" }' > $out/lua/plugins/eslint.lua
     '';
   };
 
