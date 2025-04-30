@@ -11,7 +11,7 @@
 
   #hardware.bluetooth.enable = true;
   #services.blueman.enable = true;
-
+  networking.wireless.iwd.enable = true;
   #networking.wireless.enable = true;
   #networking.wireless.networks = {
   #  "one" = {
