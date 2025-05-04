@@ -4,7 +4,7 @@
   programs.ghostty = {
     enable = true;
     settings = {
-     # font-family = "MonoLisa Nerd Font Mono";	
+    font-family = "JetBrainsMono NFM";	
       theme = "catppuccin-mocha";
       font-size = 24;
       confirm-close-surface = false;
