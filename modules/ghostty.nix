@@ -12,6 +12,7 @@
       cursor-style = "block";
       mouse-hide-while-typing = true;
       window-padding-x = 10;
+      background-opacity = 0.5;
       bold-is-bright = true;
     };
   };
