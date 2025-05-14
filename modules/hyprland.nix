@@ -138,6 +138,7 @@
         "$mod SHIFT, 0, movetoworkspace, 10"
         "$mod, S, togglespecialworkspace, magic"
         "$mod SHIFT, S, movetoworkspace, special:magic"
+	"$mod, Tab, workspace, previous"
       ];
 
       bindm = [
