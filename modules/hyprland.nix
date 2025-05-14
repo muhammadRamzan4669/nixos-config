@@ -139,6 +139,10 @@
         "$mod, S, togglespecialworkspace, magic"
         "$mod SHIFT, S, movetoworkspace, special:magic"
 	"$mod, Tab, workspace, previous"
+	"$mod, G, exec, ~/nix-config/scripts/adjust_gaps.sh increase"
+	"$mod SHIFT, G, exec, ~/nix-config/scripts/adjust_gaps.sh decrease"
+	"$mod, H, exec, ~/nix-config/scripts/adjust_rounding.sh increase"
+	"$mod SHIFT, H, exec, ~/nix-config/scripts/adjust_rounding.sh decrease"
       ];
 
       bindm = [
