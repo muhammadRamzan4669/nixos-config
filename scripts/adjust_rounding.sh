@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env zsh
 action=$1
 current_rounding=$(hyprctl getoption decoration:rounding -j | jq .int)
 

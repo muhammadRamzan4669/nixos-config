@@ -27,6 +27,7 @@
     vscodium
     neovim
     brave
+    jq
   ];
 
   programs.zsh.enable = true;

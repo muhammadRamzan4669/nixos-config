@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env zsh
 action=$1
 current_gaps_in=$(hyprctl getoption general:gaps_in -j | jq .int)
 current_gaps_out=$(hyprctl getoption general:gaps_out -j | jq .int)
