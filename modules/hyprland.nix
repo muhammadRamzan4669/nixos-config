@@ -7,8 +7,8 @@
     settings = {
       "$mod" = "SUPER";
       "$terminal" = "ghostty";
-      "$menu" = "qutebrowser"; # Fallback, replace with your preferred app if needed
-      "$browser" = "qutebrowser";
+      "$menu" = "brave"; # Fallback, replace with your preferred app if needed
+      "$browser" = "brave";
 
       monitor = ",preferred,auto,auto";
 
