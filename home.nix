@@ -6,6 +6,7 @@
     ./modules/ghostty.nix
     ./modules/qutebrowser.nix 
     ./modules/hyprpaper.nix
+    ./modules/mpv.nix
   ];
 
   home.username = "lynx";
