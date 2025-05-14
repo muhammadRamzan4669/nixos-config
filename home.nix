@@ -26,6 +26,7 @@
     iwd
     vscodium
     neovim
+    brave
   ];
 
   programs.zsh.enable = true;
