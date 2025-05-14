@@ -20,7 +20,7 @@
       general = {
         gaps_in = 0;
         gaps_out = 0;
-        border_size = 2;
+        border_size = 1;
         "col.active_border" = "rgba(33ccffee) rgba(00ff99ee) 45deg";
         "col.inactive_border" = "rgba(595959aa)";
         resize_on_border = false;
@@ -139,10 +139,10 @@
         "$mod, S, togglespecialworkspace, magic"
         "$mod SHIFT, S, movetoworkspace, special:magic"
 	"$mod, Tab, workspace, previous"
-	"$mod, G, exec, ~/nix-config/scripts/adjust_gaps.sh increase"
-	"$mod SHIFT, G, exec, ~/nix-config/scripts/adjust_gaps.sh decrease"
-	"$mod, H, exec, ~/nix-config/scripts/adjust_rounding.sh increase"
-	"$mod SHIFT, H, exec, ~/nix-config/scripts/adjust_rounding.sh decrease"
+	#"$mod, G, exec, ~/nix-config/scripts/adjust_gaps.sh increase"
+	#"$mod SHIFT, G, exec, ~/nix-config/scripts/adjust_gaps.sh decrease"
+	#"$mod, H, exec, ~/nix-config/scripts/adjust_rounding.sh increase"
+	#"$mod SHIFT, H, exec, ~/nix-config/scripts/adjust_rounding.sh decrease"
       ];
 
       bindm = [
