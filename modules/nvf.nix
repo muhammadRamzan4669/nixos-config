@@ -4,8 +4,13 @@
     settings = {
       vim = {
         viAlias = false;
-        vimAlias = true;
+        vimAlias = false;
         lsp.enable = true;
+        theme = {
+                enable=true;
+                name="gruvbox";
+                style="dark";
+        }
       };
     };
   };
