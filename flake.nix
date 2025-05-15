@@ -9,28 +9,32 @@
     };
     nvf.url = "github:NotAShelf/nvf";
     nvf.inputs.nixpkgs.follows = "nixpkgs";
-    #lazyvim-starter = {
-    #  url = "github:LazyVim/starter";
-    #  flake = false;
-    #};
   };
 
   outputs = { self, nixpkgs, home-manager, nvf, ... }:
-	  let
-	    lib = nixpkgs.lib;
-	  in {
-	    nixosConfigurations = {
-	      nixos = lib.nixosSystem {
-	        system = "x86_64-linux";
-		      modules = [
-            ./configuration.nix
-	          home-manager.nixosModules.home-manager {
-              home-manager.users.lynx = import ./home.nix;
-		          home-manager.backupFileExtension = "backup";
-              home-manager.extraSpecialArgs = { inputs = self.inputs; };
-		        }
-          ];
-	      };
+  let
+    lib = nixpkgs.lib;
+    system = "x86_64-linux";
+  in {
+    nixosConfigurations = {
+      nixos = lib.nixosSystem {
+        system = system;
+        modules = [
+          ./configuration.nix
+          home-manager.nixosModules.home-manager
+          {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.extraSpecialArgs = { inputs = self.inputs; };
+            home-manager.users.lynx = { pkgs, inputs, ... }: {
+              imports = [
+                ./home.nix
+                inputs.nvf.homeManagerModules.default
+              ];
+            };
+          }
+        ];
       };
+    };
   };
 }

@@ -1,13 +1,11 @@
-# home.nix
 { pkgs, ... }: {
   imports = [
     ./modules/hyprland.nix
     ./modules/zsh.nix
     ./modules/ghostty.nix
-    ./modules/qutebrowser.nix 
+    ./modules/qutebrowser.nix
     ./modules/hyprpaper.nix
     ./modules/nvf.nix
-    inputs.nvf.homeManagerModules.default
   ];
 
   home.username = "lynx";
@@ -17,10 +15,6 @@
   home.packages = with pkgs; [
     git
     qutebrowser
-    #ripgrep
-    #lazygit
-    #fd
-    #gcc
     mpv
     nodejs_23
     unzip
@@ -32,7 +26,7 @@
   ];
 
   programs.zsh.enable = true;
- 
+
   programs.git = {
     enable = true;
     userName = "LYNX";
