@@ -19,7 +19,7 @@
 
       general = {
         gaps_in = 0;
-        gaps_out = 1;
+        gaps_out = 5;
         border_size = 0;
         "col.active_border" = "rgba(33ccffee) rgba(00ff99ee) 45deg";
         "col.inactive_border" = "rgba(595959aa)";
@@ -33,13 +33,13 @@
         active_opacity = 1.0;
         inactive_opacity = 0.9;
         shadow = {
-          enabled = true;
+          enabled = false;
           range = 4;
           render_power = 3;
           color = "rgba(1a1a1aee)";
         };
         blur = {
-          enabled = true;
+          enabled = false;
           size = 3;
           passes = 1;
           vibrancy = 0.1696;
@@ -47,7 +47,7 @@
       };
 
       animations = {
-        enabled = true;
+        enabled = false;
         bezier = [
           "easeOutQuint,0.23,1,0.32,1"
           "easeInOutCubic,0.65,0.05,0.36,1"
