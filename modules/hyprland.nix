@@ -20,7 +20,7 @@
       general = {
         gaps_in = 0;
         gaps_out = 5;
-        border_size = 0;
+        border_size = 5;
         "col.active_border" = "rgba(33ccffee) rgba(00ff99ee) 45deg";
         "col.inactive_border" = "rgba(595959aa)";
         resize_on_border = false;
@@ -31,7 +31,7 @@
       decoration = {
         rounding = 0;
         active_opacity = 1.0;
-        inactive_opacity = 0.9;
+        inactive_opacity = 1.0;
         shadow = {
           enabled = false;
           range = 4;
