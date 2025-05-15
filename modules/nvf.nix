@@ -18,7 +18,7 @@
         languages = {
                 enableTreesitter = true;
                 nix.enable = true;
-                #javascript.enable = true;
+                ts.enable = true;
         };
       };
     };
