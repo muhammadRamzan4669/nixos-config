@@ -7,13 +7,15 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nvf.url = "github.NotAShelf/nvf";
+    nvf.inputs.nixpkgs.follows = "nixpkgs";
     #lazyvim-starter = {
     #  url = "github:LazyVim/starter";
     #  flake = false;
     #};
   };
 
-  outputs = { self, nixpkgs, home-manager, ... }:
+  outputs = { self, nixpkgs, home-manager, nvf, ... }:
 	  let
 	    lib = nixpkgs.lib;
 	  in {

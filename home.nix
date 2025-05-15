@@ -6,6 +6,8 @@
     ./modules/ghostty.nix
     ./modules/qutebrowser.nix 
     ./modules/hyprpaper.nix
+    ./modules/nvf.nix
+    inputs.nvf.homeManagerModules.default
   ];
 
   home.username = "lynx";
@@ -27,7 +29,6 @@
     vscodium
     neovim
     brave
-    jq
   ];
 
   programs.zsh.enable = true;
