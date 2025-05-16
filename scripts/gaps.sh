@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-gaps_in=$(hyprctl -j getoption general:gaps_in | jq '.int')
-gaps_out=$(hyprctl -j getoption general:gaps_out | jq '.int')
+gaps_in=$(hyprctl -j getoption general:gaps_in | jq '.custom' | awk '{print $1}' | cut -c 2-)
+gaps_out=$(hyprctl -j getoption general:gaps_out | jq '.custom' | awk '{print $1}' | cut -c 2-)
 
 function inc_gaps_in () {
   hyprctl keyword general:gaps_in $((gaps_in+5))
