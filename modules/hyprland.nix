@@ -144,10 +144,10 @@
 	#"$mod SHIFT, G, exec, ~/nix-config/scripts/adjust_gaps.sh decrease"
 	#"$mod, H, exec, ~/nix-config/scripts/adjust_rounding.sh increase"
 	#"$mod SHIFT, H, exec, ~/nix-config/scripts/adjust_rounding.sh decrease"
-        "$mod, bracketleft, exec, sh ~/nix-config/scripts/gaps.sh --inc_gaps_in"
-        "$mod, bracketright, exec, sh ~/nix-config/scripts/gaps.sh --dec_gaps_in"
-        "$mod, equal, exec, sh ~/nix-config/scripts/gaps.sh --dec_gaps_out"
-        "$mod, minus, exec, sh ~/nix-config/scripts/gaps.sh --dec_gaps_out"
+        "$mod, bracketleft, exec, sh ~/nix-config/scripts/gaps.sh --inc 5"
+        "$mod, bracketright, exec, sh ~/nix-config/scripts/gaps.sh --dec 5"
+                                #        "$mod, equal, exec, sh ~/nix-config/scripts/gaps.sh --inc 5"
+                                #        "$mod, minus, exec, sh ~/nix-config/scripts/gaps.sh --dec_gaps_out"
       ];
 
       bindm = [
