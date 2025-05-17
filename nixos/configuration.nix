@@ -4,7 +4,15 @@
     ../modules/nixos/caps2esc.nix
   ];
 
-  boot.loader.systemd-boot.enable = true;
+  boot.loader.systemd-boot.enable = false;
+
+  boot.loader.grub = {
+    enable = true;
+    device = "nodev";  # For EFI systems
+    efiSupport = true;
+    useOSProber = false;  # Optional, adjust as needed
+  };
+
   boot.loader.efi.canTouchEfiVariables = true;
   boot.blacklistedKernelModules = ["amdgpu" "radeon"];
   networking.hostName = "nixos";
