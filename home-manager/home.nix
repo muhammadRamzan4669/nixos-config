@@ -6,7 +6,6 @@
     ../modules/home-manager/qutebrowser.nix
     ../modules/home-manager/hyprpaper.nix
     ../modules/home-manager/nvf.nix
-    inputs.stylix.homeModules.stylix
   ];
 
   home.username = "lynx";
