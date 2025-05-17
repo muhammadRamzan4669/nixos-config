@@ -1,11 +1,11 @@
 { pkgs, inputs, ... }: {
   imports = [
-    ./modules/hyprland.nix
-    ./modules/zsh.nix
-    ./modules/ghostty.nix
-    ./modules/qutebrowser.nix
-    ./modules/hyprpaper.nix
-    ./modules/nvf.nix
+    ../modules/home-manager/hyprland.nix
+    ../modules/home-manager/zsh.nix
+    ../modules/home-manager/ghostty.nix
+    ../modules/home-manager/qutebrowser.nix
+    ../modules/home-manager/hyprpaper.nix
+    ../modules/home-manager/nvf.nix
     inputs.stylix.homeModules.stylix
   ];
 
@@ -27,8 +27,6 @@
     jq
   ];
 
-  programs.zsh.enable = true;
-
   programs.git = {
     enable = true;
     userName = "LYNX";
@@ -38,9 +36,9 @@
   # Stylix configuration
   stylix = {
     enable = true;
-    image = ./wallpaper.jpg; # Use the same wallpaper as hyprpaper
-    base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml"; # Match your ghostty theme
-    polarity = "dark"; # or "light" depending on your preference
+    image = ../wallpaper.jpg; # Adjusted path
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
+    polarity = "dark";
     fonts = {
       serif = {
         package = pkgs.dejavu_fonts;
@@ -65,15 +63,15 @@
       size = 24;
     };
     opacity = {
-      terminal = 0.85; # Match your commented-out ghostty background-opacity
+      terminal = 0.85;
       applications = 1.0;
       popups = 1.0;
       desktop = 1.0;
     };
     targets = {
-      hyprland.enable = true; # Theme Hyprland
-      zsh.enable = true; # Theme ZSH/Powerlevel10k
-      qutebrowser.enable = true; # Theme qutebrowser
+      hyprland.enable = true;
+      zsh.enable = true;
+      qutebrowser.enable = true;
     };
   };
 }

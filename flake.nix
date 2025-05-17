@@ -22,7 +22,7 @@
         system = "x86_64-linux";
         specialArgs = { inherit inputs; };
         modules = [
-          ./configuration.nix
+          ./nixos/configuration.nix
           home-manager.nixosModules.home-manager
           {
             home-manager.useGlobalPkgs = true;
@@ -30,7 +30,7 @@
             home-manager.extraSpecialArgs = { inputs = inputs; };
             home-manager.users.lynx = {
               imports = [
-                ./home.nix
+                ./home-manager/home.nix
                 inputs.nvf.homeManagerModules.default
               ];
             };
