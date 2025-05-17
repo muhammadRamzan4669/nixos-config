@@ -25,6 +25,7 @@
     neovim
     brave
     jq
+    foliate
   ];
 
   programs.zsh.enable = true;
