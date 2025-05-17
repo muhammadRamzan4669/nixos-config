@@ -11,7 +11,7 @@
       shell-integration-features = "no-cursor";
       cursor-style = "block";
       mouse-hide-while-typing = true;
-      window-padding-x = 10;
+      window-padding-x = 20;
       window-padding-y = 10;
       #background-opacity = 0.85;
       bold-is-bright = true;
