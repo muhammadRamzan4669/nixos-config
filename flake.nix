@@ -1,5 +1,5 @@
 {
-  description = "My First Flake";
+  description = "My NixOS Flake";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
@@ -7,26 +7,28 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    nvf.url = "github:NotAShelf/nvf";
-    nvf.inputs.nixpkgs.follows = "nixpkgs";
+    stylix = {
+      url = "github:danth/stylix";
+    };
+    nvf = {
+      url = "github:NotAShelf/nvf";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { self, nixpkgs, home-manager, nvf, ... }:
-  let
-    lib = nixpkgs.lib;
-    system = "x86_64-linux";
-  in {
+  outputs = { self, nixpkgs, home-manager, stylix, nvf, ... }@inputs: {
     nixosConfigurations = {
-      nixos = lib.nixosSystem {
-        system = system;
+      nixos = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        specialArgs = { inherit inputs; };
         modules = [
           ./configuration.nix
           home-manager.nixosModules.home-manager
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-            home-manager.extraSpecialArgs = { inputs = self.inputs; };
-            home-manager.users.lynx = { pkgs, inputs, ... }: {
+            home-manager.extraSpecialArgs = { inputs = inputs; };
+            home-manager.users.lynx = {
               imports = [
                 ./home.nix
                 inputs.nvf.homeManagerModules.default

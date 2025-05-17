@@ -19,13 +19,19 @@
 
       general = {
         gaps_in = 2;
-        gaps_out = 10;
+        gaps_out = 8;
         border_size = 3;
+
+        "col.active_border" = "$color1";
+        "col.inactive_border" = "rgba(00000000)";
+
+
+
         #"col.active_border" = "rgba(33ccffee) rgba(00ff99ee) 45deg";
-        "col.active_border"="rgba(ff0000ee)";
-        "col.inactive_border" = "rgba(595959aa)";
-        resize_on_border = false;
-        allow_tearing = false;
+        #"col.active_border"="rgba(ff0000ee)";
+        #"col.inactive_border" = "rgba(595959aa)";
+        resize_on_border = true;
+        allow_tearing = true;
         layout = "dwindle";
       };
 
