@@ -32,45 +32,4 @@
     userName = "LYNX";
     userEmail = "ramzanlynx@outlook.com";
   };
-
-  # Stylix configuration
-  stylix = {
-    enable = true;
-    image = ../wallpaper.jpg;
-    base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
-    polarity = "dark";
-    fonts = {
-      serif = {
-        package = pkgs.dejavu_fonts;
-        name = "DejaVu Serif";
-      };
-      sansSerif = {
-        package = pkgs.dejavu_fonts;
-        name = "DejaVu Sans";
-      };
-      monospace = {
-        package = pkgs.jetbrains-mono;
-        name = "JetBrains Mono";
-      };
-      emoji = {
-        package = pkgs.noto-fonts-emoji;
-        name = "Noto Color Emoji";
-      };
-    };
-    cursor = {
-      package = pkgs.bibata-cursors;
-      name = "Bibata-Modern-Ice";
-      size = 24;
-    };
-    opacity = {
-      terminal = 0.85;
-      applications = 1.0;
-      popups = 1.0;
-      desktop = 1.0;
-    };
-    targets = {
-      hyprland.enable = true;
-      qutebrowser.enable = true;
-    };
-  };
 }
