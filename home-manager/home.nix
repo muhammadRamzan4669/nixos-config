@@ -16,7 +16,7 @@
     git
     qutebrowser
     mpv
-    nodejs_23
+    nodejs
     unzip
     aria2
     iwd
