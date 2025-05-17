@@ -36,7 +36,7 @@
   # Stylix configuration
   stylix = {
     enable = true;
-    image = ../wallpaper.jpg; # Adjusted path
+    image = ../wallpaper.jpg;
     base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
     polarity = "dark";
     fonts = {
@@ -70,7 +70,6 @@
     };
     targets = {
       hyprland.enable = true;
-      zsh.enable = true;
       qutebrowser.enable = true;
     };
   };
